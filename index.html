@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Belajar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/98dba4447d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>WEB DESIGN</p>
+            <h1>Ini <span>Web</span><br>Buat Belajar Gan</h1>
+        </div>
+    </div>
+</div>
+<!-- -----about------ -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-tittle">About Us</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officiis ipsam ipsa nobis sunt debitis dolorem magnam rem cum, aliquid placeat at nisi maiores error! Mollitia ex quas iusto ut?</p>
+                <div class="tab-tittles">
+                    <p class="tab-links active-link" onclick="opentab('contoh1')">Contoh 1</p>
+                    <p class="tab-links" onclick="opentab('contoh2')">Contoh 2</p>
+                    <p class="tab-links" onclick="opentab('contoh3')">Contoh 3</p>
+                </div>
+                <div class="tab-contents active-tab" id="contoh1">
+                    <ul>
+                        <li><span>WEB DESIGN 1</span><br>Design web aja 1</li>
+                        <li><span>WEB DESIGN 2</span><br>Design web aja 2</li>
+                        <li><span>WEB DESIGN 3</span><br>Design web aja 3</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="contoh2">
+                    <ul>
+                        <li><span>APP DEV 1</span><br>Dev app 1</li>
+                        <li><span>APP DEV 2</span><br>Dev app 2</li>
+                        <li><span>APP DEV 3</span><br>Dev app 3</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="contoh3">
+                    <ul>
+                        <li><span>GATAU 1</span><br>Isinya 1</li>
+                        <li><span>GATAU 2</span><br>Isinya 2</li>
+                        <li><span>GATAU 3</span><br>Isinya 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------services--------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-tittle">Our Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda eaque suscipit voluptates nam dolorum iste perspiciatis libero! Qui alias impedit nesciunt accusantium a perferendis iste vel dolore, exercitationem iure dolorem?</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h2>App Dev</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda eaque suscipit voluptates nam dolorum iste perspiciatis libero! Qui alias impedit nesciunt accusantium a perferendis iste vel dolore, exercitationem iure dolorem?</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-phoenix-framework"></i>
+                <h2>Gatau</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda eaque suscipit voluptates nam dolorum iste perspiciatis libero! Qui alias impedit nesciunt accusantium a perferendis iste vel dolore, exercitationem iure dolorem?</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
