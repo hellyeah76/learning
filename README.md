@@ -1,0 +1,2 @@
+# learning
+buka aja gatau
